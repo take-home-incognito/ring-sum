@@ -15,3 +15,8 @@ def store_value(key):
         return {}, 200
     else:
         return {}, 500
+
+
+@app.route("/metric/<key>/sum", methods=["GET"])
+def read_value(key):
+    return {"value": 0}, 200
