@@ -21,7 +21,7 @@ example after (correctly) posting 12345 to key "meow" twice:
 
 def _remove_old_data(key, timestamp):
     for entry in live_data[key][0]:
-        if timestamp - entry[1] > timedelta(seconds=10):
+        if timestamp - entry[1] > timedelta(hours=1):
             live_data[key][1] -= entry[0]
             live_data[key][0].remove(entry)
         else:
