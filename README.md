@@ -42,3 +42,9 @@ we get the python default (ms, I think? would have to check) for free.
   - in addition to the linked list, a bucket knows its sum total
   - on a GET request, we can simply sum the totals of buckets N-59 through N-1 (inclusive) with the (more expensive to calcluate) partial totals of buckets N and N-60.
   - I would also see about having a cron job (or scheduled GET ping?) every second to handle the "manual" updating of data structures I do now. Being able to clean up the data structures every second on the second would be extremely useful.
+
+# final cleanup notes
+
+- really glad I remember deques exist, that makes me feel way better about performance
+- docstrings are always nice for cleaning up a file before merge
+- I definitely think my "next steps" would be input handling / error responses
